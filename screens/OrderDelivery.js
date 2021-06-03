@@ -1,12 +1,12 @@
-import React from 'react'
-import {View,
-Text}
-from"react-native";
-const OrderDelivery =() =>{
-    return(
+import React from 'react';
+import {
+    Text, View
+} from "react-native";
+const OrderDelivery = () => {
+    return (
         <View>
-            <Text></Text>
-            </View>
+            <Text>This is Order Delivery Component</Text>
+        </View>
     )
 }
 export default OrderDelivery;
