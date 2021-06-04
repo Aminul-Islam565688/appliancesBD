@@ -309,8 +309,8 @@ const ProductsDetails = ({ route, navigation }) => {
                                 borderRadius: SIZES.radius
                             }}
                             onPress={() => navigation.navigate("OrderDelivery", {
-                                restaurant: restaurant,
-                                currentLocation: currentLocation
+                                item
+
                             })}
                         >
                             <Text style={{ color: COLORS.white, ...FONTS.h2 }}>Confirm Order</Text>
