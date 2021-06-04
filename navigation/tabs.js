@@ -1,24 +1,21 @@
 import React from 'react';
-import { View, Image, TouchableOpacity } from 'react-native'
-import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom-tabs";
-
-import Svg, { Path } from 'react-native-svg'
-
+import {
+    View,
+    Image,
+    TouchableOpacity
+} from 'react-native';
+import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom-tabs"
+import Svg, { Path } from 'react-native-svg';
 import { Home } from "../screens"
-
 import { COLORS, icons } from "../constants"
-
 const Tab = createBottomTabNavigator();
-
 const TabBarCustomButton = ({ accessibilityState, children, onPress }) => {
-
     var isSelected = accessibilityState.selected
-
     if (isSelected) {
         return (
             <View style={{ flex: 1, alignItems: "center" }}>
                 <View style={{ flexDirection: 'row', position: 'absolute', top: 0 }}>
-                    <View style={{ flex: 1, backgroundColor: COLORS.gteen }}></View>
+                    <View style={{ flex: 1, backgroundColor: COLORS.white }}></View>
                     <Svg
                         width={75}
                         height={61}
@@ -29,7 +26,7 @@ const TabBarCustomButton = ({ accessibilityState, children, onPress }) => {
                             fill={COLORS.white}
                         />
                     </Svg>
-                    <View style={{ flex: 1, backgroundColor: COLORS.orange }}></View>
+                    <View style={{ flex: 1, backgroundColor: COLORS.white }}></View>
                 </View>
 
                 <TouchableOpacity
@@ -40,12 +37,13 @@ const TabBarCustomButton = ({ accessibilityState, children, onPress }) => {
                         width: 50,
                         height: 50,
                         borderRadius: 25,
-                        backgroundColor: COLORS.red
+                        backgroundColor: COLORS.white
                     }}
                     onPress={onPress}
                 >
                     {children}
                 </TouchableOpacity>
+
             </View>
         )
     } else {
@@ -67,25 +65,23 @@ const TabBarCustomButton = ({ accessibilityState, children, onPress }) => {
 
 const Tabs = () => {
     return (
-        <Tab.Navigator tabBarOptions={{
-            showLabel: false,
-            style: {
-                position: 'absolute',
-                left: 0,
-                bottom: 0,
-                right: 0,
-                borderTopWidth: 0,
-                backgroundColor: "transparent",
-                elevation: 0
-            }
-        }}>
+        <Tab.Navigator
+            tabBarOptions={{
+                showLabel: false,
+                style: {
+
+                    borderTopWidth: 0,
+                    backgroundColor: "transparent",
+                    elevation: 0
+                }
+            }}>
             <Tab.Screen
                 name="Home"
                 component={Home}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
-                            source={icons.house}
+                            source={icons.shop}
                             resizeMode="contain"
                             style={{
                                 width: 25,
@@ -99,8 +95,7 @@ const Tabs = () => {
                             {...props}
                         />
                     )
-                }}
-            />
+                }} />
             <Tab.Screen
                 name="Search"
                 component={Home}
@@ -122,15 +117,14 @@ const Tabs = () => {
                         />
                     )
 
-                }}
-            />
+                }} />
             <Tab.Screen
-                name="Favourite"
+                name="Like"
                 component={Home}
                 options={{
                     tabBarIcon: ({ focused }) => (
                         <Image
-                            source={icons.hearts}
+                            source={icons.hand}
                             resizeMode="contain"
                             style={{
                                 width: 25,
@@ -144,9 +138,7 @@ const Tabs = () => {
                             {...props}
                         />
                     )
-
-                }}
-            />
+                }} />
             <Tab.Screen
                 name="User"
                 component={Home}
@@ -161,18 +153,18 @@ const Tabs = () => {
                                 tintColor: focused ? COLORS.primary : COLORS.secondary
                             }}
                         />
+
+
+
                     ),
                     tabBarButton: (props) => (
                         <TabBarCustomButton
                             {...props}
                         />
                     )
-
-                }}
-            />
+                }} />
 
         </Tab.Navigator>
     )
 }
-
 export default Tabs;
