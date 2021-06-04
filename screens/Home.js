@@ -35,12 +35,14 @@ const Home = () => {
             photo: images.smallCooker,
             shortDescription: 'High durable, Colorful designs, Brand:  Walton',
             price: 180,
+            capacity: '2 L',
             categories: [2, 4, 6],
+            rating: 4.8,
             menu: [
                 {
                     menuId: 1,
                     name: 'Small Size Rice Cooker',
-                    photo: 'https://waltonbd.com/image/cache/catalog/Home%20Appliances/Gas%20stove/wrc-pape/16-364x364.jpg',
+                    photo: images.smallCooker,
                     description: 'Two Aluminum Inner pots, High Temperature resistant Plastic body, High Temperature resistant Poly-carbonate Food Steamer',
                     price: 110,
                     capacity: '1.8 L',
@@ -49,7 +51,7 @@ const Home = () => {
                 {
                     menuId: 2,
                     name: 'Large Size Rice Cooker',
-                    photo: 'https://waltonbd.com/image/cache/catalog/Home%20Appliances/Gas%20stove/wrc-pape/16-364x364.jpg',
+                    photo: images.mediumCooker,
                     description: 'Usable For 1.8-2.0 KG Uncooked Rice, Double Aluminum Pot with Non Stick Coating, Seamless Body',
                     price: 210,
                     capacity: '2.8 L',
@@ -58,7 +60,7 @@ const Home = () => {
                 {
                     menuId: 3,
                     name: 'Medium Size Rice Cooker',
-                    photo: 'https://waltonbd.com/image/cache/catalog/Home%20Appliances/Gas%20stove/wrc-pape/16-364x364.jpg',
+                    photo: images.large_Cooker,
                     description: 'Usable for 1.3-1.5 KG uncooked rice, Combination of Aluminum and SS Inner pot, Seamless body',
                     price: 170,
                     capacity: '2.2 L',
@@ -73,31 +75,36 @@ const Home = () => {
             photo: images.smallCurryCooker,
             shortDescription: 'High durable, Colorful designs, Brand: Best Buy',
             price: 100,
+            capacity: '1.5 L',
             categories: [1, 3, 5],
+            rating: 4.7,
             menu: [
                 {
                     menuId: 1,
                     name: 'Small Size Curry Cooker',
-                    photo: 'https://waltonbd.com/image/catalog/Home%20Appliances/Curry%20Cooker/WCC-WK30/WCC-WK30-1.jpg',
+                    photo: images.smallCurryCooker,
                     description: 'FASHIONABLE DESIGN & ATTRACTIVE COLOR COOKER, TEMPERED GLASS LID WITH FASHIONABLE STAND TYPE HANDLE. ALUMINUM INNER POT WITH NON-STICK COATING',
                     price: 130,
-                    power: '900 watt'
+                    power: '900 watt',
+                    capacity: '1.8 L',
                 },
                 {
                     menuId: 2,
                     name: 'Large Size Curry Cooker',
-                    photo: 'https://waltonbd.com/image/catalog/Home%20Appliances/Curry%20Cooker/WCC-WK50/WK50-700-green.jpg',
+                    photo: images.mediumCurryCooker,
                     description: '4.5 litter non-stick curry cooker has unique.Innovative non- stick ceramic coating. Four times more durable than ordinary non-stick surfaces',
                     price: 250,
-                    power: '1500 watt'
+                    power: '1500 watt',
+                    capacity: '2.2 L',
                 },
                 {
                     menuId: 3,
                     name: 'Medium Size Curry Cooker',
-                    photo: 'https://waltonbd.com/image/catalog/Home%20Appliances/Curry%20Cooker/WCC-WK50/WK50-700-green.jpg',
+                    photo: images.mediumCurryCooker,
                     description: 'Fashionable design attractive color cooker.Tempered glass lid with fashionable stand type handle',
                     price: 180,
-                    power: '1350 watt'
+                    power: '1350 watt',
+                    capacity: '2.8 L',
                 },
 
             ]
@@ -108,12 +115,14 @@ const Home = () => {
             shortDescription: 'High durable, Colorful designs, Brand: Best Buy',
             photo: images.largeSizeHotpot,
             price: 160,
+            capacity: '2.2 L',
             categories: [2, 4, 6],
+            rating: 5,
             menu: [
                 {
                     menuId: 1,
                     name: 'Small Size HotPot',
-                    photo: 'https://images.othoba.com/images/thumbs/0137581_solar-stelo-hotpot-5000ml.jpeg',
+                    photo: images.smallSizeHotpot,
                     description: 'Keeps food hot more than 8 hours, Attractive, New Design, Highly Durable',
                     price: 160,
                     capacity: '1.5 L',
@@ -122,7 +131,7 @@ const Home = () => {
                 {
                     menuId: 2,
                     name: 'Medium Size HotPot',
-                    photo: 'https://images.othoba.com/images/thumbs/0137570_titan-stelo-hotpot-700ml-by-dpls_300.jpeg',
+                    photo: images.mediumSizeHotPot,
                     description: 'Keeps food hot more than 10 hours, Attractive, Shiney Design, Highly effective and Durable',
                     price: 190,
                     capacity: '1.8 L',
@@ -131,7 +140,7 @@ const Home = () => {
                 {
                     menuId: 3,
                     name: 'Large Size HotPot',
-                    photo: 'https://static-01.daraz.com.bd/p/601f129a49642aed365c1a13b8a5aefd.jpg',
+                    photo: images.largeSizeHotpot,
                     description: 'Keeps food hot more than 10 hours, Very Good experts have their recomendationAttractive, Shiney Design, Highly effective and Durable',
                     price: 220,
                     capacity: '2.2 L',
@@ -146,11 +155,13 @@ const Home = () => {
             photo: images.mediumFridge,
             price: 350,
             categories: [2, 4, 6],
+            capacity: '265 L',
+            rating: 4.9,
             menu: [
                 {
                     menuId: 1,
                     name: 'Small Fridge',
-                    photo: 'https://waltonbd.com/image/catalog/Refrigerator%20and%20Freezer/Direct%20Cool%20Refrigerator/Jan%202017/1X1/id1.jpg',
+                    photo: images.fridge,
                     description: '',
                     price: 250,
                     capacity: '101 L',
@@ -159,7 +170,7 @@ const Home = () => {
                 {
                     menuId: 2,
                     name: 'Medium Fridge',
-                    photo: 'https://waltonbd.com/image/catalog/Refrigerator%20and%20Freezer/Direct%20Cool%20Refrigerator/2019/1D4-GDEL/1.jpg',
+                    photo: images.mediumFridge,
                     description: 'Type: Direct Cool, Gross Volume: 157 Ltr, Net Volume: 144 Ltr, Refrigerant: R134a',
                     price: 300,
                     capacity: '157 L',
@@ -168,7 +179,7 @@ const Home = () => {
                 {
                     menuId: 3,
                     name: 'Large Fridge',
-                    photo: 'https://waltonbd.com/image/cache/catalog/Refrigerator%20and%20Freezer/Direct%20Cool%20Refrigerator/2019/October/WFC-3A7-ELEX-XX/1-364x364.jpg',
+                    photo: images.largeFridge,
                     description: 'Refrigerant: R600a, Using Latest Intelligent, INVERTER technology, Do not use Voltage stabilizer, if use warranty will be voided',
                     price: 400,
                     capacity: '265 L',
@@ -182,12 +193,14 @@ const Home = () => {
             name: 'Washing Machine',
             photo: images.mediumWashingMachine,
             price: 400,
+            capacity: '6.5 kg',
+            rating: 4.8,
 
             menu: [
                 {
                     menuId: 1,
                     name: 'Small Washing Machine',
-                    photo: 'https://waltonbd.com/image/cache/catalog/Home%20Appliances/Washing/WWM-AFM/wwm-afm60-1-364x364.jpg',
+                    photo: images.smallWashingMachine,
                     description: 'Walton Washing machine is a result of constant innovation which is designed with a view to ease the lives of the people',
                     price: 410,
                     capacity: '6.5 kg',
@@ -197,7 +210,7 @@ const Home = () => {
                 {
                     menuId: 2,
                     name: 'Medium Washing Machine',
-                    photo: 'https://waltonbd.com/image/cache/catalog/Home%20Appliances/Washing/WWM-AFT80W/wwm-aft80w-white-1-364x364.png',
+                    photo: images.mediumWashingMachine,
                     description: 'Front Loading	A+++ Energy Efficiency Class, 140° Wide Angle Super Large Door',
                     price: 480,
                     capacity: '8 kg',
@@ -206,7 +219,7 @@ const Home = () => {
                 {
                     menuId: 3,
                     name: 'Large washing Machine',
-                    photo: 'https://waltonbd.com/image/cache/catalog/Home%20Appliances/Washing/WWM-AFC90W/wwm-afc90w-1-364x364.png',
+                    photo: images.largeWashingMachine,
                     description: 'OXYFRESH Technology, CIM Inverter Motor, 16 Wash Programs',
                     price: 520,
                     capacity: ' 9.5 kg',
@@ -221,11 +234,14 @@ const Home = () => {
             photo: images.largeAC,
             price: 480,
             categories: [2, 4, 6],
+            capacity: '1 ton',
+
+            rating: 4.95,
             menu: [
                 {
                     menuId: 1,
                     name: 'Small Air Conditioner',
-                    photo: 'https://waltonbd.com/image/cache/catalog/air-conditioner/split-ac/12000-btu/wsi-inverna-12a/01-364x364.jpg',
+                    photo: images.ac,
                     description: '',
                     price: 400,
                     capacity: '1 ton',
@@ -234,7 +250,7 @@ const Home = () => {
                 {
                     menuId: 2,
                     name: 'Medium Air Conditioner',
-                    photo: 'https://waltonbd.com/image/cache/catalog/air-conditioner/split-ac/18000-btu/wsi-oceanus-voice%20control-18f/02-364x364.jpg',
+                    photo: images.mediumAC,
                     description: 'Compressor Warranty: 10 Years, Spare Parts support: 3 Years, After Sales Service: 1 Year Free',
                     price: 480,
                     capacity: '1.5 ton',
@@ -243,7 +259,7 @@ const Home = () => {
                 {
                     menuId: 3,
                     name: 'Large Air Conditioner',
-                    photo: 'https://waltonbd.com/image/cache/catalog/air-conditioner/split-ac/24000-btu/wsi-daimond-24c/01-364x364.jpg',
+                    photo: images.largeAC,
                     description: 'Good operating control with comfort level cooling.Has auto opeartion mode, dula rotary compressor.',
                     price: 600,
                     capacity: '2 ton',
@@ -257,33 +273,35 @@ const Home = () => {
             name: 'Generator',
             photo: images.mediumGenerator,
             price: 400,
-            categories: [2, 4, 6],
+            categories: [1, 2],
+            capacity: 'Ampers',
+            rating: 4.9,
             menu: [
                 {
                     menuId: 1,
                     name: 'Small Petrol Generator',
-                    photo: 'https://services.powerequipment.honda.com/content/images/pe/models/eu2200itag_pe_imglg.jpg',
+                    photo: images.generator,
                     description: 'Ideal for TV, DVD, satellite, fridge, coffee, pot, & more, Super quiet & lightweight, Inverter - stable power',
                     price: 850,
-                    capacity: 'Based on ampers',
+                    capacity: 'Ampers',
                     power: '2200 watt'
                 },
                 {
                     menuId: 2,
                     name: 'Medium Size Generator',
-                    photo: 'https://services.powerequipment.honda.com/content/images/pe/models/eg2800iag_pe_imglg.jpg',
+                    photo: images.mediumGenerator,
                     description: 'Trusted, quiet power for home back up & more, Lightweight and portable, Inverter - Fuel efficient, quality power for sensitive equipment & electronics',
                     price: 1150,
-                    capacity: 'Based on ampers',
+                    capacity: 'Ampers',
                     power: '3400 watt'
                 },
                 {
                     menuId: 3,
                     name: 'Large Electric Geneartor',
-                    photo: 'https://services.powerequipment.honda.com/content/images/pe/models/eb6500x1ag_pe_imglg.jpg',
+                    photo: images.largeGenerator,
                     description: 'Provides 7,000 watts for 10 secs to start larger equipment, Full GFCI protection',
                     price: 1400,
-                    capacity: 'Based on ampers',
+                    capacity: 'Ampers',
                     power: '7034 watt'
                 },
 
@@ -308,7 +326,7 @@ const Home = () => {
 
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                     <View style={{ width: '70 %', height: '100 %', backgroundColor: COLORS.lightGray4, alignItems: 'center', justifyContent: 'center', borderRadius: SIZES.radius }}>
-                        <Text style={{ ...FONTS.h3 }}>Search For Home Appliances</Text>
+                        <Text style={{ ...FONTS.h3 }}>Search For Appliances</Text>
                     </View>
                 </View>
                 <TouchableOpacity style={{ width: 50, paddingRight: SIZES.padding * 2, justifyContent: 'center' }}>
@@ -326,8 +344,8 @@ const Home = () => {
 
     function onSelectCategory(category) {
         console.log(products)
-        let productList = products.filter(a => a.categories.includes(category.id))
-        setProductDetails(productList)
+        let productList = productData.filter(a => console.log(a))
+        setProducts(productList)
         setSelectedCategory(category)
     }
 
@@ -376,11 +394,28 @@ const Home = () => {
     function renderProductList() {
 
         const renderItem = ({ item }) => {
-            <TouchableOpacity style={{ marginBottom: SIZES.padding * 2 }}>
-                <View>
-                    <Image source={item.photo} resizeMode="cover" style={{ width: "100%", height: "200%", borderRadius: SIZES.radius }} />
-                </View>
-            </TouchableOpacity>
+            return (
+                <TouchableOpacity style={{ marginBottom: SIZES.padding * 2 }}
+                    onPress={() => navigation.navigate("Products", { item })}>
+                    <View style={{ marginBottom: SIZES.padding }}>
+                        <Image source={item.photo} resizeMode="cover" style={{ width: "100%", height: 200, borderRadius: SIZES.radius }} />
+
+                        <View style={{
+                            position: 'absolute', bottom: 0, height: 50, width: SIZES.width * 0.3, backgroundColor: COLORS.white, borderTopRightRadius: SIZES.radius,
+                            borderBottomLeftRadius: SIZES.radius, alignItems: 'center', justifyContent: 'center', ...styles.shadow
+                        }}>
+                            <Text style={{ ...FONTS.h4 }}>{item.menu[0].capacity}</Text>
+                        </View>
+                    </View>
+                    <Text style={{ ...FONTS.body2 }}>{item.name}</Text>
+                    <View style={{ marginTop: SIZES.padding, flexDirection: 'row' }}>
+                        <Image source={icons.star} style={{ height: 20, width: 20, tintColor: COLORS.primary, marginRight: 10 }} />
+                        <Text style={{}}>{item.rating}</Text>
+                        <View style={{ flexDirection: 'row', marginLeft: 10 }}>
+
+                        </View>
+                    </View>
+                </TouchableOpacity>)
         }
 
         return (
