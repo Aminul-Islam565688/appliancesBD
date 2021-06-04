@@ -1,62 +1,170 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from 'react';
 import {
-  Image, StyleSheet, View
+  View,
+  Image,
+  TouchableOpacity
 } from 'react-native';
-import { Home } from "../screens";
-
-
+import { createBottomTabNavigator, BottomTabBar } from "@react-navigation/bottom-tabs"
+import Svg, { Path } from 'react-native-svg';
+import { Home } from "../screens"
+import { COLORS, icons } from "../constants"
 const Tab = createBottomTabNavigator();
+const TabBarCustomButton = ({ accessibilityState, children, onPress }) =>{
+  var isSelected = accessibilityState.selected
+  if(isSelected){
+    return (
+      <View style={{ flex: 1, alignItems: "center" }}>
+                <View style={{ flexDirection: 'row', position: 'absolute', top: 0 }}>
+                    <View style={{ flex: 1, backgroundColor: COLORS.white }}></View>
+                    <Svg
+                        width={75}
+                        height={61}
+                        viewBox="0 0 75 61"
+                    >
+                        <Path
+                            d="M75.2 0v61H0V0c4.1 0 7.4 3.1 7.9 7.1C10 21.7 22.5 33 37.7 33c15.2 0 27.7-11.3 29.7-25.9.5-4 3.9-7.1 7.9-7.1h-.1z"
+                            fill={COLORS.white}
+                        />
+                    </Svg>
+                    <View style={{ flex: 1, backgroundColor: COLORS.white }}></View>
+                </View>
 
-
-
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: 50,
-  },
-  tinyLogo: {
-    width: 50,
-    height: 50,
-  },
-  logo: {
-    width: 66,
-    height: 58,
-  },
-});
-
-
-const Tabs = () => {
-  return (
-    <Tab.Navigator>
-
-
-      <Tab.Screen
-        name="Home"
-        component={Home}
-        options={{
-          tabBarIcon: ({ focused }) => (
-
-            <View>
-              <Image
-                style={styles.tinyLogo}
-                source={{
-                  uri: 'https://reactnative.dev/img/tiny_logo.png',
-                }}
-              />
-              <Image
-                style={styles.logo}
-                source={{
-                  uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==',
-                }}
-              />
+                <TouchableOpacity
+                    style={{
+                        top: -22.5,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: 50,
+                        height: 50,
+                        borderRadius: 25,
+                        backgroundColor: COLORS.white
+                    }}
+                    onPress={onPress}
+                >
+                    {children}
+                </TouchableOpacity>
+                
             </View>
-          )
-        }}>
-
-      </Tab.Screen>
-    </Tab.Navigator>
-
-  )
+    )
+  }else {
+    return(
+      <TouchableOpacity
+      style={{
+          flex: 1,
+          height: 60,
+          backgroundColor: COLORS.white
+      }}
+      activeOpacity={1}
+      onPress={onPress}
+  >
+      {children}
+  </TouchableOpacity>
+    )
+  }
 }
 
+const Tabs = () =>{
+  return(
+    <Tab.Navigator
+    tabBarOptions={{
+      showLabel:false,
+      style: {
+        
+        borderTopWidth: 0,
+        backgroundColor: "transparent",
+        elevation: 0
+    }
+    }}>
+      <Tab.Screen
+       name="Home"
+       component={Home}
+       options ={{
+        tabBarIcon: ({ focused }) =>(
+          <Image
+          source={icons.shop}
+          resizeMode="contain"
+          style={{
+              width: 25,
+              height: 25,
+              tintColor: focused ? COLORS.primary : COLORS.secondary
+          }}
+      />
+        ),
+        tabBarButton: (props) => (
+          <TabBarCustomButton
+              {...props}
+          />
+      )
+       }}/>
+        <Tab.Screen
+       name="Search"
+       component={Home}
+       options ={{
+        tabBarIcon: ({ focused }) =>(
+          <Image
+          source={icons.search}
+          resizeMode="contain"
+          style={{
+              width: 25,
+              height: 25,
+              tintColor: focused ? COLORS.primary : COLORS.secondary
+          }}
+      />
+         ) ,
+         tabBarButton: (props) => (
+           <TabBarCustomButton
+               {...props}
+           />
+       )
+        
+       }}/>
+               <Tab.Screen
+       name="Like"
+       component={Home}
+       options ={{
+        tabBarIcon: ({ focused }) =>(
+          <Image
+          source={icons.hand}
+          resizeMode="contain"
+          style={{
+              width: 25,
+              height: 25,
+              tintColor: focused ? COLORS.primary : COLORS.secondary
+          }}
+      />
+        ),
+        tabBarButton: (props) => (
+          <TabBarCustomButton
+              {...props}
+          />
+      )
+       }}/>
+        <Tab.Screen
+       name="User"
+       component={Home}
+       options ={{
+        tabBarIcon: ({ focused }) =>(
+          <Image
+          source={icons.user}
+          resizeMode="contain"
+          style={{
+              width: 25,
+              height: 25,
+              tintColor: focused ? COLORS.primary : COLORS.secondary
+          }}
+      /> 
+      
+      
+      
+        ),
+        tabBarButton: (props) => (
+          <TabBarCustomButton
+              {...props}
+          />
+      ) 
+       }}/>
+       
+    </Tab.Navigator>
+  )
+}
 export default Tabs;
