@@ -35,8 +35,15 @@ export const basket = require("../assets/icons/shopping-basket.png");
 export const star = require("../assets/icons/star.png");
 export const shop = require("../assets/icons/shop.png");
 export const hand = require("../assets/icons/hand.png");
+export const kitchen = require("../assets/icons/kitchen.png");
+export const laundry = require("../assets/icons/laundry.png");
+export const smart1 = require("../assets/icons/smart1.png");
 
 export default {
+    kitchen,
+    laundry,
+    smart1,
+    house1,
     factory,
     cart,
     map,

@@ -26,23 +26,23 @@ const Home = ({ navigation }) => {
     const categoryData = [
         {
             id: 1,
-            name: "Rice",
-            icon: icons.rice_bowl,
+            name: "Home",
+            icon: icons.house1,
         },
         {
             id: 2,
-            name: "Noodles",
-            icon: icons.noodle,
+            name: "Kitchen",
+            icon: icons.kitchen,
         },
         {
             id: 3,
-            name: "Hot Dogs",
-            icon: icons.hotdog,
+            name: "Laundry",
+            icon: icons.laundry,
         },
         {
             id: 4,
-            name: "Salads",
-            icon: icons.salad,
+            name: "Smart Appliance",
+            icon: icons.smart1,
         },
         {
             id: 5,
