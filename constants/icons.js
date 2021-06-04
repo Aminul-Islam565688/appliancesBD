@@ -38,8 +38,20 @@ export const hand = require("../assets/icons/hand.png");
 export const kitchen = require("../assets/icons/kitchen.png");
 export const laundry = require("../assets/icons/laundry.png");
 export const smart1 = require("../assets/icons/smart1.png");
+export const fridge = require("../assets/icons/fridge.png");
+export const microwave = require("../assets/icons/microwave.png");
+export const garbage = require("../assets/icons/garbage.png");
+export const sewing = require("../assets/icons/sewing-machine.png");
+export const cleaning = require("../assets/icons/cleaning.png");
+export const dishwasher = require("../assets/icons/dishwasher.png");
 
 export default {
+    dishwasher,
+    cleaning,
+    sewing,
+    garbage,
+    microwave,
+    fridge,
     kitchen,
     laundry,
     smart1,

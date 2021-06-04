@@ -19,6 +19,7 @@ const largeFridge = require("../assets/images/largeFridge.jpg");
 const mediumFridge = require("../assets/images/mediumFridge.jpg");
 const ac = require("../assets/images/ac.jpg");
 const mediumAC = require("../assets/images/mediumAC.jpg");
+const map = require("../assets/images/map.jpg");
 
 const largeAC = require("../assets/images/largeAC.jpg");
 const avatar_1 = require("../assets/images/avatar-1.jpg");
@@ -79,6 +80,7 @@ export default {
     avatar_3,
     avatar_4,
     avatar_5,
+    map,
     baked_fries,
     burger_restaurant_1,
     burger_restaurant_2,

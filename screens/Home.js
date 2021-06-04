@@ -1,16 +1,15 @@
 import React from 'react';
 import {
-    SafeAreaView,
-    View,
-    Text,
-    StyleSheet,
-    TouchableOpacity,
-    Image,
-    FlatList
+    FlatList, Image, SafeAreaView,
+
+
+    StyleSheet, Text,
+
+    TouchableOpacity, View
 } from "react-native";
+import { COLORS, FONTS, icons, images, SIZES } from '../constants';
 
 
-import { icons, images, SIZES, COLORS, FONTS } from '../constants'
 
 
 
@@ -46,33 +45,33 @@ const Home = ({ navigation }) => {
         },
         {
             id: 5,
-            name: "Burgers",
-            icon: icons.hamburger,
+            name: "Refrigerator",
+            icon: icons.fridge,
         },
         {
             id: 6,
-            name: "Pizza",
-            icon: icons.pizza,
+            name: "Garbage Disposal",
+            icon: icons.garbage,
         },
         {
             id: 7,
-            name: "Snacks",
-            icon: icons.fries,
+            name: "Sewing Machine",
+            icon: icons.sewing,
         },
         {
             id: 8,
-            name: "Sushi",
-            icon: icons.sushi,
+            name: "Vacuum",
+            icon: icons.cleaning,
         },
         {
             id: 9,
-            name: "Desserts",
-            icon: icons.donut,
+            name: "Dishwasher",
+            icon: icons.dishwasher,
         },
         {
             id: 10,
-            name: "Drinks",
-            icon: icons.drink,
+            name: "Microwave",
+            icon: icons.microwave,
         },
 
     ]

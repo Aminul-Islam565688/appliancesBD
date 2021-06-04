@@ -1,16 +1,14 @@
 import React from 'react';
-
 import {
-    SafeAreaView,
+    Animated, Image, SafeAreaView,
     StyleSheet,
-    View,
+
     Text,
-    TouchableOpacity,
-    Image,
-    Animated
+    TouchableOpacity, View
 } from 'react-native';
 // import RNGestureHandlerButton from 'react-native-gesture-handler/lib/typescript/components/GestureHandlerButton';
-import { icons, COLORS, SIZES, FONTS } from '../constants'
+import { COLORS, FONTS, icons, SIZES } from '../constants';
+
 
 
 const ProductsDetails = ({ route, navigation }) => {
@@ -256,8 +254,9 @@ const ProductsDetails = ({ route, navigation }) => {
         return total.toFixed(2)
     }
 
-
+    // console.log(products:products);
     function renderOrder() {
+
         return (
             <View>
                 {
@@ -309,8 +308,7 @@ const ProductsDetails = ({ route, navigation }) => {
                                 borderRadius: SIZES.radius
                             }}
                             onPress={() => navigation.navigate("OrderDelivery", {
-                                item
-
+                                products: item
                             })}
                         >
                             <Text style={{ color: COLORS.white, ...FONTS.h2 }}>Confirm Order</Text>
