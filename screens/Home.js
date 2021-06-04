@@ -13,17 +13,17 @@ import {
 
 import { icons, images, SIZES, COLORS, FONTS } from '../constants'
 
-const Home = () => {
+const Home = ({ navigation }) => {
 
     const categoryData = [
         {
             id: 1,
-            name: "Home Appliances",
+            name: "Local",
             icon: icons.house,
         },
         {
             id: 2,
-            name: "Industry Appliances",
+            name: "Industry",
             icon: icons.factory,
         },
     ]
@@ -396,7 +396,10 @@ const Home = () => {
         const renderItem = ({ item }) => {
             return (
                 <TouchableOpacity style={{ marginBottom: SIZES.padding * 2 }}
-                    onPress={() => navigation.navigate("Products", { item })}>
+                    onPress={() => navigation.navigate("ProductsDetails", {
+                        item,
+
+                    })}>
                     <View style={{ marginBottom: SIZES.padding }}>
                         <Image source={item.photo} resizeMode="cover" style={{ width: "100%", height: 200, borderRadius: SIZES.radius }} />
 
@@ -412,7 +415,7 @@ const Home = () => {
                         <Image source={icons.star} style={{ height: 20, width: 20, tintColor: COLORS.primary, marginRight: 10 }} />
                         <Text style={{}}>{item.rating}</Text>
                         <View style={{ flexDirection: 'row', marginLeft: 10 }}>
-
+                            <Text style={{ ...FONTS.body3 }}>${item.price}</Text>
                         </View>
                     </View>
                 </TouchableOpacity>)
