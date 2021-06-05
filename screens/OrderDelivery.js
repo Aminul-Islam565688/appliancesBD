@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import { COLORS, FONTS, SIZES } from "../constants";
+import { COLORS, FONTS, icons, SIZES } from "../constants";
 
 
 
@@ -32,12 +32,15 @@ const OrderDelivery = ({ route, navigation }) => {
         )
     }
 
-    // let { products } = route.params;
+
 
     React.useEffect(() => {
         let { products } = route.params;
+        console.log(products);
+        // let { products } = route.params;
 
         setProducts(products)
+
         // setCurrentLocation(currentLocation)
     })
 
@@ -66,7 +69,7 @@ const OrderDelivery = ({ route, navigation }) => {
                     }}
                 >
                     <Image
-                        source={{ uri: 'https://media.istockphoto.com/vectors/car-icon-black-minimalist-icon-isolated-on-white-background-vector-id855073082?k=6&m=855073082&s=612x612&w=0&h=EM6TGOPLnvK9VyvBoEJEzYKiClnYHM1xXC7P6aTASk0=' }}
+                        source={icons.locationDrop}
                         style={{
                             width: 30,
                             height: 30,
@@ -75,10 +78,10 @@ const OrderDelivery = ({ route, navigation }) => {
                     />
 
                     <View style={{ flex: 1 }}>
-                        <Text style={{ ...FONTS.body3 }}>Khilgoan</Text>
+                        <Text style={{ ...FONTS.body3 }}>Shahbag</Text>
                     </View>
 
-                    <Text style={{ ...FONTS.body3 }}>5 mins</Text>
+                    <Text style={{ ...FONTS.body3 }}>1 Day</Text>
                 </View>
             </View>
         )
@@ -109,7 +112,7 @@ const OrderDelivery = ({ route, navigation }) => {
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         {/* Avatar */}
                         <Image
-                            source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}
+                            source={products?.photo}
                             // source={restaurant?.courier.avatar}
                             style={{
                                 width: 50,
@@ -121,18 +124,18 @@ const OrderDelivery = ({ route, navigation }) => {
                         <View style={{ flex: 1, marginLeft: SIZES.padding }}>
                             {/* Name & Rating */}
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={{ ...FONTS.h4 }}>{products?.menu.name}</Text>
+                                <Text style={{ ...FONTS.h4 }}>{products?.name}</Text>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Image
-                                        source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}
+                                        source={icons.star}
                                         style={{ width: 18, height: 18, tintColor: COLORS.primary, marginRight: SIZES.padding }}
                                     />
-                                    <Text style={{ ...FONTS.body3 }}>5</Text>
+                                    <Text style={{ ...FONTS.body3 }}>{products?.rating}</Text>
                                 </View>
                             </View>
 
                             {/* Restaurant */}
-                            <Text style={{ color: COLORS.darkgray, ...FONTS.body4 }}>{products?.menu.name}</Text>
+                            <Text style={{ color: COLORS.darkgray, ...FONTS.body4 }}>{products?.name}</Text>
                         </View>
                     </View>
 

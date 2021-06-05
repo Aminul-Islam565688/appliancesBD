@@ -33,6 +33,7 @@ export const user = require("../assets/icons/user.png");
 
 export const basket = require("../assets/icons/shopping-basket.png");
 export const star = require("../assets/icons/star.png");
+export const locationDrop = require("../assets/icons/location-drop.png");
 export const shop = require("../assets/icons/shop.png");
 export const hand = require("../assets/icons/hand.png");
 export const kitchen = require("../assets/icons/kitchen.png");
@@ -93,5 +94,6 @@ export default {
     sushi,
     user,
     shop,
-    hand
+    hand,
+    locationDrop
 }
